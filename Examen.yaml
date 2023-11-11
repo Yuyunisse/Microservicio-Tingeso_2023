@@ -1,1 +1,10 @@
-
+server:
+  port: ${(PORT:${SERVER_PORT:0}}
+eureka:
+  client:
+    fetch-registry: true
+    register-whit-eureka: true
+    service-url:
+      defauly-zone: http://localhost:8761/eureka
+instance:
+  instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
