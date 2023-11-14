@@ -18,12 +18,12 @@ spring:
         - id: alumno-service
           uri: lb://alumno-service
           predicates:
-            - Path=/alumno/**
+            - Path=/topalumno/**
         - id: pago-service
           uri: lb://pago-service
           predicates:
-            - Path=/pagos/**
+            - Path=/toppagos/**
         - id: examen-service
           uri: lb://examen-service
           predicates:
-            - Path=/examen/**
+            - Path=/topexamen/**
